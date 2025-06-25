@@ -16,7 +16,11 @@ public class UiTestBase
     public async Task Setup()
     {
         Playwright = await Microsoft.Playwright.Playwright.CreateAsync();
-        Browser = await Playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = true });
+       Browser = await Playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+        {
+            Headless = false,
+            SlowMo=200
+        });
         Page = await Browser.NewPageAsync();
 
         API = await Playwright.APIRequest.NewContextAsync(new APIRequestNewContextOptions
