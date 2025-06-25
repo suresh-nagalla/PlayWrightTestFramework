@@ -63,6 +63,7 @@ namespace UiTests
             await Page.EvalOnSelectorAsync(itemSelector, "el => el.style.border = '3px solid red'");
             var screenshotPath = $"screenshot_{itemId}.png";
             await Page.ScreenshotAsync(new PageScreenshotOptions { Path = screenshotPath, FullPage = true });
+TestContext.WriteLine($"📸 Screenshot captured: {screenshotPath}");
             TestContext.AddTestAttachment(screenshotPath);
         }
     }
