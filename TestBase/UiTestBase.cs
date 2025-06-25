@@ -1,5 +1,7 @@
 using Microsoft.Playwright;
 using NUnit.Framework;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace TestBase;
 
@@ -8,7 +10,7 @@ public class UiTestBase
     protected IPlaywright Playwright;
     protected IBrowser Browser;
     protected IPage Page;
-    protected APIRequestContext API;
+    protected IAPIRequestContext API;
 
     [SetUp]
     public async Task Setup()
