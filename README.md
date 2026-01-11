@@ -1,26 +1,25 @@
-# SimpleTestFramework
+# TestProject
 
-This is a skeleton for API + Playwright-based UI test automation using .NET 8 and NUnit.
+This repository contains a simple .NET 7 solution for testing API and UI functionalities.
 
-## Structure
+## Projects
 
-- `ApiClients/`: API helper classes
-- `UiPages/`: Page Object Model classes
-- `ApiTests/`: REST API tests
-- `UiTests/`: Playwright UI tests
-- `TestBase/`: Base setup classes for UI/API tests
-- `Models/`: Request/response DTOs
+### TestProject.Api.Tests
 
-## Usage
+Contains tests for verifying the GET and POST endpoints of the API.
 
-1. Restore dependencies:
-   ```
-   dotnet restore
-   ```
+### TestProject.Ui.Tests
 
-2. Run tests:
-   ```
-   dotnet test
-   ```
+Contains tests for verifying that the created item is visible in the UI.
 
-Use the agent prompt provided to generate tests.
+## Running Tests
+
+To run API tests, use the following command:
+```
+dotnet test TestProject.Api.Tests
+```
+
+To run UI tests, use the following command:
+```
+dotnet test TestProject.Ui.Tests
+```
